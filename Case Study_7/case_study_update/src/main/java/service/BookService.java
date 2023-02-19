@@ -18,4 +18,14 @@ public class BookService implements IBookService {
     public void create(Books books) {
         bookRepository.create(books);
     }
+
+    @Override
+    public boolean delete(int id) {
+        return bookRepository.delete(id);
+    }
+
+    @Override
+    public List<Books> search(String name) {
+        return bookRepository.find(name);
+    }
 }
