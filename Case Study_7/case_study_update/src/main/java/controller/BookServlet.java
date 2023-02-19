@@ -28,8 +28,38 @@ public class BookServlet extends HttpServlet {
             case "create":
                 createBook(request, response);
                 break;
+            case "search" :
+                search(request,response);
+                break;
+            case "delete":
+                deleteBook(request,response);
+                break;
 
         }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        List<Books> booksList = bookService.search(name);
+        request.setAttribute("booksList",booksList);
+        try {
+            request.getRequestDispatcher("view/book/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void deleteBook(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("deleteId"));
+        String mess = "xóa thành công";
+        boolean check = bookService.delete(id);
+        if (!check){
+            mess = "Xóa thất bại";
+        }
+        request.setAttribute("mess",mess);
+        findAll(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -45,6 +75,7 @@ public class BookServlet extends HttpServlet {
                 break;
             case "edit":
                 showEditForm(request,response);
+
             default:
                 findAll(request, response);
                 break;
