@@ -19,28 +19,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body style="background-image: url(https://file.vfo.vn/hinh/2016/08/hinh-anh-dep-ve-quyen-sach-2.jpg)">
 <form class="form-inline my-2 my-lg-0" action="/books?action=search" method="post">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="name" name="name">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 </form>
-<table class="table">
+<div class="container-fluid">
+    <div class="row">
+        <center>
+            <h1 class="font-text-footer" style="font-style: italic">Book List</h1>
+            <c:if test="${mess !=null}">
+                <h2 class="text-danger">${mess}</h2>
+            </c:if>
+        </center>
+        <br>
+        <table id="tableBook" class="table table-hover" >
+    <thead>
     <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Page</td>
-        <td>Author</td>
-        <td>Cost</td>
-        <td>Category</td>
+        <td style="color: red">ID</td>
+        <td style="color: red">Name</td>
+        <td style="color: red">Page</td>
+        <td style="color: red">Author</td>
+        <td style="color: red">Cost</td>
+        <td style="color: red">Category</td>
     </tr>
+    </thead>
     <c:forEach var="book" items="${booksList}">
         <tr>
-            <td>${book.id}</td>
-            <td>${book.name}</td>
-            <td>${book.pageSize}</td>
-            <td>${book.author}</td>
-            <td>${book.cost}</td>
-            <td>${book.category}</td>
+            <td style="color: blue">${book.id}</td>
+            <td style="color: blue">${book.name}</td>
+            <td style="color: blue">${book.pageSize}</td>
+            <td style="color: blue">${book.author}</td>
+            <td style="color: blue">${book.cost}</td>
+            <td style="color: blue">${book.category}</td>
             <td>
                 <div>   <%--            Thêm href để chỉnh sửa     --%>
                 <a href="/books?action=edit&id=${book.id}">
