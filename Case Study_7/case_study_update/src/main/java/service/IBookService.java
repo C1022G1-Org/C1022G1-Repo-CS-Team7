@@ -12,4 +12,8 @@ public interface IBookService {
     boolean delete(int id);
 
     List<Books> search(String name);
+
+    boolean updateBook(Books books);
+
+    Books selectBooks(String id);
 }
