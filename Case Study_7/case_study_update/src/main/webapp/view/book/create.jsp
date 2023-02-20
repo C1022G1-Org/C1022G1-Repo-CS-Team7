@@ -24,23 +24,23 @@
     <form method="post">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form-control" >
+            <input type="text" name="name" id="name" class="form-control"  required>
         </div>
         <div class="form-group">
             <label for="pageSize">Page</label>
-            <input type="text" name="pageSize" id="pageSize" class="form-control" >
+            <input type="text" name="pageSize" id="pageSize" class="form-control" required >
         </div>
         <div class="form-group">
             <label for="cost">Cost</label>
-            <input type="text" name="cost" id="cost" class="form-control" >
+            <input type="text" name="cost" id="cost" class="form-control"  required>
         </div>
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" name="author" id="author" class="form-control" >
+            <input type="text" name="author" id="author" class="form-control"  required>
         </div>
         <div class="form-group">
             <label for="category">Category</label>
-            <input type="text" name="category" id="category" class="form-control" >
+            <input type="number" name="category" id="category" class="form-control" required>
         </div>
         <div class="form-group">
             <button type="submit">Save</button>

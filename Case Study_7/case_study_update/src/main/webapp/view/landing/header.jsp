@@ -37,7 +37,7 @@
     <nav class="navbar navbar-light">
         <div class="container-fluid" style="color: coral">
             <a class="navbar-brand text-warning ps-5 click col-l-2" href="/view/landing/home.jsp" >Trang Chủ</a>
-            <a class="navbar-brand text-warning click col-l-2" href="/view/book/list.jsp" >Các Loại Sách</a>
+            <a class="navbar-brand text-warning click col-l-2" href="/books" >Các Loại Sách</a>
             <a class="navbar-brand text-warning click col-l-2" href="">Các Sách Đã Mượn</a>
             <a class="navbar-brand text-warning click col-l-2" href="" >Blog</a>
             <a class="navbar-brand text-warning click col-l-2" href="">Thông Tin Liên Hệ</a>
