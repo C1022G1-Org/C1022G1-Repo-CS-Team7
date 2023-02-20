@@ -12,4 +12,7 @@ public interface IBookRepository {
 
     List<Books> find(String name);
 
+    boolean updateBook(Books books);
+
+    Books selectBooks(String id);
 }

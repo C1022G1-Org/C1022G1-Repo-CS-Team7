@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: K7
@@ -21,7 +22,7 @@
 <body>
 <div class="container">
     <h1 class="text-center">Thêm mới sách</h1>
-    <form method="post">
+    <form method="post" action="/books?action=create">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" id="name" class="form-control"  required>
@@ -39,8 +40,12 @@
             <input type="text" name="author" id="author" class="form-control"  required>
         </div>
         <div class="form-group">
-            <label for="category">Category</label>
-            <input type="number" name="category" id="category" class="form-control" required>
+            <label>Category</label>
+            <select name="category">
+                <c:forEach items="${categoryList}" var="category">
+                    <option value="${category.getId()}">${category.name}</option>
+                </c:forEach>
+            </select>
         </div>
         <div class="form-group">
             <button type="submit">Save</button>

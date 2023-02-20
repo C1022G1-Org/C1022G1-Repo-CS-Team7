@@ -59,19 +59,19 @@
     <div class="col-md-3 px-0">
         <ul class="list-group vh-100 overflow-scroll" style="border: 2px solid #7952b3">
             <li class="list-group-item" aria-current="true">
-                <a href="https://www.traveloka.com/vi-vn/explore/destination/30-dia-diem-du-lich-da-nang/57930" style="text-decoration: none;font-family: 'Times New Roman'">
-                    Các Địa Điểm Du Lịch Đà Nẵng</a>
+                <a href="/books" style="text-decoration: none;font-family: 'Times New Roman'">
+                    Các Loại Sách Hot Nhất Hiện Nay</a>
             </li>
             <li class="list-group-item">
                 <a href="https://furamavietnam.com/vi/culinary/" style="text-decoration: none; font-family: 'Times New Roman'">
-                    Ẩm Thực
+                    Văn Học Nước Ngoài
                 </a>
             </li>
             <li class="list-group-item">
-                <a href="https://furamavietnam.com/vi/spa-and-fitness/" style="text-decoration: none; font-family: 'Times New Roman'"> SPA</a>
+                <a href="https://furamavietnam.com/vi/spa-and-fitness/" style="text-decoration: none; font-family: 'Times New Roman'"> Văn Học Trong Nước</a>
             </li>
             <li class="list-group-item">
-                <a href="https://furamavietnam.com/vi/recreation/" style="text-decoration: none; font-family: 'Times New Roman'"> Giải Trí</a>
+                <a href="https://furamavietnam.com/vi/recreation/" style="text-decoration: none; font-family: 'Times New Roman'"> Tiểu Thuyế</a>
             </li>
 
         </ul>
