@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <a href="/books">BookList</a>
+  <%@include file="view/landing/home.jsp" %>
   </body>
 </html>

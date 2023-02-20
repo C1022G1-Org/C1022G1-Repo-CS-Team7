@@ -1,7 +1,7 @@
 package controller;
 
 import model.Books;
-import service.BookService;
+import service.Impl.BookService;
 import service.IBookService;
 
 import javax.servlet.RequestDispatcher;
@@ -43,7 +43,7 @@ public class BookServlet extends HttpServlet {
         List<Books> booksList = bookService.search(name);
         request.setAttribute("booksList",booksList);
         try {
-            request.getRequestDispatcher("view/book/list.jsp").forward(request,response);
+            request.getRequestDispatcher("/view/book/list.jsp").forward(request,response);
         } catch (ServletException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
