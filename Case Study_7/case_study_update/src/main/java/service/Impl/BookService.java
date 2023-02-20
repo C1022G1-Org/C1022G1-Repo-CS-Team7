@@ -29,4 +29,12 @@ public class BookService implements IBookService {
     public List<Books> search(String name) {
         return bookRepository.find(name);
     }
+    @Override
+    public boolean updateBook(Books books) {
+        return bookRepository.updateBook(books);
+    }
+    @Override
+    public Books selectBooks(String id) {
+        return bookRepository.selectBooks(id);
+    }
 }

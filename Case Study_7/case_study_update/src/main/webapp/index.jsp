@@ -12,5 +12,6 @@
   </head>
   <body>
   <%@include file="view/landing/home.jsp" %>
+<%--  <a href="/category">HAHA</a>--%>
   </body>
 </html>
