@@ -15,4 +15,6 @@ public interface IBookRepository {
     boolean updateBook(Books books);
 
     Books selectBooks(String id);
+
+    Books findById(int id);
 }

@@ -37,4 +37,9 @@ public class BookService implements IBookService {
     public Books selectBooks(String id) {
         return bookRepository.selectBooks(id);
     }
+
+    @Override
+    public Books findById(int id) {
+        return bookRepository.findById(id);
+    }
 }
