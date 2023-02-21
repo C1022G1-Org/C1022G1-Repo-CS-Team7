@@ -135,4 +135,28 @@ public class BookRepository implements IBookRepository {
         }
         return books;
     }
+
+    @Override
+    public Books findById(int id) {
+        try {
+            PreparedStatement preparedStatement = BaseRepository.getConnection()
+                    .prepareStatement("select * from book where id =?;");
+            preparedStatement.setInt(1, id);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            Books books;
+            if (resultSet.next()) {
+                books = new Books();
+                books.setId(resultSet.getInt("id"));
+                books.setName(resultSet.getString("name"));
+                books.setPageSize(resultSet.getString("page_size"));
+                books.setCost(resultSet.getDouble("cost"));
+                books.setAuthor(resultSet.getString("name_author"));
+                books.setCategory(resultSet.getString("id_category"));
+                return books;
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
 }
